@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react';
-
+import Image from 'next/image'
+import submitimg from '../../../public/image/submit-successfully.png'
 
 const MultiStepForm = () => {
 
@@ -110,7 +111,7 @@ const MultiStepForm = () => {
               <div className='max-w-2xl p-8 text-center'>
                 <h2 className="text-2xl font-bold mb-2">Step #2</h2>
                 <p className="mb-3 text-2xl font-semibold">Detail</p>
-                            <p >We're thrilled at the opportunity to help you grow your business online.</p>
+                            <p >We`&apos;`re thrilled at the opportunity to help you grow your business online.</p>
                             <p className="mb-4 ">Please let us know the best way to reach you.</p>
                             <div className="mb-4">
                                 <label className="block mb-1 text-left"><strong>Name</strong></label>
@@ -148,7 +149,7 @@ const MultiStepForm = () => {
                             </div>
                             </div>
                             <div className="mb-4">
-                                <label className="block mb-1 text-left"><strong>Anything else you'd like to share?</strong></label>
+                                <label className="block mb-1 text-left"><strong>Anything else you`&apos;`d like to share?</strong></label>
                                 <textarea
                                     name="additionalInfo"
                                     value={formData.additionalInfo}
@@ -184,10 +185,13 @@ const MultiStepForm = () => {
                 <div className='flex  flex-col items-center justify-center bg-gray-100  h-screen '>
                 <div className="bg-white p-8 rounded-lg shadow-lg max-w-lg text-center">
                 <div className="mb-4">
-                  <img
-                    className="w-16 h-16 mx-auto mb-4 text-green-500"
-                    src='https://icons.veryicon.com/png/o/miscellaneous/8atour/submit-successfully.png'
-                  />
+                <Image
+                                    className="w-16 h-16 mx-auto mb-4 text-green-500"
+                                    src={submitimg}
+                                    alt="Success"
+                                    width={64}
+                                    height={64}
+                                />
                    
                 </div>
                 <h2 className="text-2xl font-semibold mb-4">Your Request for a Proposal Has Been Submitted!</h2>
